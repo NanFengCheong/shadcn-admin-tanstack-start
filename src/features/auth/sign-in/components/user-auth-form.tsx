@@ -3,10 +3,11 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link, useNavigate } from '@tanstack/react-router'
-import { Loader2, LogIn } from 'lucide-react'
+import { Building2, Loader2, LogIn } from 'lucide-react'
 import { toast } from 'sonner'
 import { IconFacebook, IconGithub } from '@/assets/brand-icons'
 import { useAuthStore } from '@/stores/auth-store'
+import { beginEntraIdSignIn, isEntraIdEnabled } from '@/lib/entra-id-auth'
 import { sleep, cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
@@ -40,8 +41,10 @@ export function UserAuthForm({
   ...props
 }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = useState(false)
+  const [isEntraLoading, setIsEntraLoading] = useState(false)
   const navigate = useNavigate()
   const { auth } = useAuthStore()
+  const entraIdEnabled = isEntraIdEnabled()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -79,6 +82,21 @@ export function UserAuthForm({
       },
       error: 'Error',
     })
+  }
+
+  async function onEntraIdSignIn() {
+    setIsEntraLoading(true)
+
+    try {
+      await beginEntraIdSignIn(redirectTo)
+    } catch (error) {
+      setIsEntraLoading(false)
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : 'Microsoft Entra ID sign-in failed.'
+      )
+    }
   }
 
   return (
@@ -144,6 +162,21 @@ export function UserAuthForm({
             <IconFacebook className='h-4 w-4' /> Facebook
           </Button>
         </div>
+        {entraIdEnabled && (
+          <Button
+            variant='outline'
+            type='button'
+            disabled={isLoading || isEntraLoading}
+            onClick={onEntraIdSignIn}
+          >
+            {isEntraLoading ? (
+              <Loader2 className='animate-spin' />
+            ) : (
+              <Building2 className='h-4 w-4' />
+            )}
+            Continue with Microsoft
+          </Button>
+        )}
       </form>
     </Form>
   )

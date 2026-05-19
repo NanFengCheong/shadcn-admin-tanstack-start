@@ -76,7 +76,7 @@ If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest 
 
 **Icons:** [Lucide Icons](https://lucide.dev/icons/), [Tabler Icons](https://tabler.io/icons) (Brand icons only)
 
-**Auth (partial):** [Clerk](https://go.clerk.com/GttUAaK)
+**Auth (partial):** [Clerk](https://go.clerk.com/GttUAaK), optional Microsoft Entra ID
 
 ## Run Locally
 
@@ -103,6 +103,37 @@ Start the server
 ```bash
   pnpm run dev
 ```
+
+## Microsoft Entra ID
+
+Microsoft Entra ID sign-in is opt-in and disabled by default. The app includes
+an Authorization Code + PKCE flow that can be enabled without changing code.
+
+1. Create or open an app registration in Microsoft Entra admin center.
+2. Add a Single-page application redirect URI:
+
+```text
+http://localhost:3000/auth/entra/callback
+```
+
+For Cloudflare Workers, also add your deployed callback URL:
+
+```text
+https://<your-worker-domain>/auth/entra/callback
+```
+
+3. Copy `.env.example` to `.env` and set:
+
+```bash
+VITE_ENTRA_ID_ENABLED=true
+VITE_ENTRA_ID_TENANT_ID=<tenant-id>
+VITE_ENTRA_ID_CLIENT_ID=<application-client-id>
+VITE_ENTRA_ID_REDIRECT_URI=http://localhost:3000/auth/entra/callback
+VITE_ENTRA_ID_SCOPES="openid profile email"
+```
+
+When enabled, the sign-in page shows `Continue with Microsoft`. Keep
+`VITE_ENTRA_ID_ENABLED=false` to hide the Microsoft sign-in option.
 
 ## Sponsoring this project ❤️
 
