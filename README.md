@@ -1,6 +1,6 @@
 # Shadcn Admin Dashboard
 
-Admin Dashboard UI crafted with Shadcn and Vite. Built with responsiveness and accessibility in mind.
+Admin Dashboard UI crafted with Shadcn and TanStack Start. Built with responsiveness and accessibility in mind.
 
 ![alt text](public/images/shadcn-admin.png)
 
@@ -62,7 +62,11 @@ If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest 
 
 **UI:** [ShadcnUI](https://ui.shadcn.com) (TailwindCSS + RadixUI)
 
+**App Framework:** [TanStack Start](https://tanstack.com/start/latest)
+
 **Build Tool:** [Vite](https://vitejs.dev/)
+
+**Hosting Target:** [Cloudflare Workers](https://developers.cloudflare.com/workers/)
 
 **Routing:** [TanStack Router](https://tanstack.com/router/latest)
 
