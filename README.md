@@ -2,8 +2,6 @@
 
 Admin Dashboard UI crafted with Shadcn and TanStack Start. Built with responsiveness and accessibility in mind.
 
-![alt text](public/images/shadcn-admin.png)
-
 I've been creating dashboard UIs at work and for my personal projects. I always wanted to make a reusable collection of dashboard UI for future projects; and here it is now. While I've created a few custom components, some of the code is directly adapted from ShadcnUI examples.
 
 > This is not a starter project (template) though. I'll probably make one in the future.
@@ -74,20 +72,20 @@ If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest 
 
 **Icons:** [Lucide Icons](https://lucide.dev/icons/), [Tabler Icons](https://tabler.io/icons) (Brand icons only)
 
-**Auth (partial):** [Clerk](https://go.clerk.com/GttUAaK), optional Microsoft Entra ID
+**Auth (partial):** [Clerk](https://clerk.com/), optional Microsoft Entra ID
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/satnaing/shadcn-admin.git
+  git clone https://github.com/NanFengCheong/shadcn-admin-tanstack-start.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd shadcn-admin
+  cd shadcn-admin-tanstack-start
 ```
 
 Install dependencies
@@ -132,11 +130,6 @@ VITE_ENTRA_ID_SCOPES="openid profile email"
 
 When enabled, the sign-in page shows `Continue with Microsoft`. Keep
 `VITE_ENTRA_ID_ENABLED=false` to hide the Microsoft sign-in option.
-
-
-## Author
-
-Crafted with 🤍 by [@satnaing](https://github.com/satnaing)
 
 ## License
 
