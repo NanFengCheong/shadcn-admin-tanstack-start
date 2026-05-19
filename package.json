@@ -4,10 +4,11 @@
   "version": "2.2.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "wrangler dev --config dist/server/wrangler.json",
+    "deploy": "wrangler deploy",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "knip": "knip",
@@ -42,6 +43,7 @@
     "@tailwindcss/vite": "^4.2.2",
     "@tanstack/react-query": "^5.99.0",
     "@tanstack/react-router": "^1.168.22",
+    "@tanstack/react-start": "^1.168.6",
     "@tanstack/react-table": "^8.21.3",
     "axios": "^1.15.0",
     "class-variance-authority": "^0.7.1",
@@ -64,6 +66,7 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.37.2",
     "@eslint/js": "^10.0.1",
     "@faker-js/faker": "^10.4.0",
     "@tanstack/eslint-plugin-query": "^5.99.0",
@@ -90,6 +93,7 @@
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.8",
     "vitest": "^4.1.4",
-    "vitest-browser-react": "^2.2.0"
+    "vitest-browser-react": "^2.2.0",
+    "wrangler": "^4.93.0"
   }
 }
