@@ -49,9 +49,9 @@ Follow the ticket boundaries exactly. If something outside scope looks wrong, re
 
 Run the narrowest useful checks for the ticket. Prefer:
 
-- `pnpm lint`
-- `pnpm build`
-- `pnpm test`
+- `bun run lint`
+- `bun run build`
+- `bun run test`
 - Manual browser verification for user-facing UI changes
 
 If a check cannot run, report why and list remaining risk.
@@ -75,4 +75,3 @@ Every ticket run should end with:
 - Preserve unrelated dirty work.
 - Stage only files that belong to the ticket.
 - Do not rewrite history, reset, clean, or discard changes unless the user explicitly asks.
-

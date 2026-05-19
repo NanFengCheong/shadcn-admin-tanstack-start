@@ -11,16 +11,15 @@ Last updated: 2026-05-19
 
 - Package name: `shadcn-admin`
 - App type: TanStack Start + React + TypeScript admin app
-- Package manager: pnpm lockfile present
+- Package manager: Bun
 
 ## Main Scripts
 
-- `pnpm dev`
-- `pnpm build`
-- `pnpm lint`
-- `pnpm test`
-- `pnpm format:check`
-- `pnpm preview`
+- `bun run dev`
+- `bun run build`
+- `bun run lint`
+- `bun run test`
+- `bun run preview`
 
 ## Current Structure
 
@@ -58,4 +57,3 @@ These files were already modified or untracked before this init pass and should 
 ## Next Recommended Ticket
 
 - Define first concrete ticket in `docs/Tickets.md` before coding.
-

@@ -4,8 +4,6 @@ Admin Dashboard UI crafted with Shadcn and TanStack Start. Built with responsive
 
 ![alt text](public/images/shadcn-admin.png)
 
-[![Sponsored by Clerk](https://img.shields.io/badge/Sponsored%20by-Clerk-5b6ee1?logo=clerk)](https://go.clerk.com/GttUAaK)
-
 I've been creating dashboard UIs at work and for my personal projects. I always wanted to make a reusable collection of dashboard UI for future projects; and here it is now. While I've created a few custom components, some of the code is directly adapted from ShadcnUI examples.
 
 > This is not a starter project (template) though. I'll probably make one in the future.
@@ -72,7 +70,7 @@ If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest 
 
 **Type Checking:** [TypeScript](https://www.typescriptlang.org/)
 
-**Linting/Formatting:** [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+**Linting:** [Oxlint](https://oxc.rs/docs/guide/usage/linter.html)
 
 **Icons:** [Lucide Icons](https://lucide.dev/icons/), [Tabler Icons](https://tabler.io/icons) (Brand icons only)
 
@@ -95,13 +93,13 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  pnpm install
+  bun install
 ```
 
 Start the server
 
 ```bash
-  pnpm run dev
+  bun run dev
 ```
 
 ## Microsoft Entra ID
@@ -135,15 +133,6 @@ VITE_ENTRA_ID_SCOPES="openid profile email"
 When enabled, the sign-in page shows `Continue with Microsoft`. Keep
 `VITE_ENTRA_ID_ENABLED=false` to hide the Microsoft sign-in option.
 
-## Sponsoring this project ❤️
-
-If you find this project helpful or use this in your own work, consider [sponsoring me](https://github.com/sponsors/satnaing) to support development and maintenance. You can [buy me a coffee](https://buymeacoffee.com/satnaing) as well. Don’t worry, every penny helps. Thank you! 🙏
-
-For questions or sponsorship inquiries, feel free to reach out at [satnaingdev@gmail.com](mailto:satnaingdev@gmail.com).
-
-### Current Sponsor
-
-- [Clerk](https://go.clerk.com/GttUAaK) - authentication and user management for the modern web
 
 ## Author
 

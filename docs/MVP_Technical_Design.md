@@ -11,6 +11,7 @@
 - Tailwind CSS
 - Vitest and Playwright browser mode
 - Cloudflare Wrangler
+- Bun
 
 ## App Structure
 
@@ -23,11 +24,10 @@
 
 ## Scripts
 
-- `pnpm dev` starts local dev server.
-- `pnpm build` runs TypeScript build and Vite build.
-- `pnpm lint` runs ESLint.
-- `pnpm test` runs Vitest in browser headless mode.
-- `pnpm format:check` checks Prettier formatting.
+- `bun run dev` starts local dev server.
+- `bun run build` runs TypeScript build and Vite build.
+- `bun run lint` runs Oxlint.
+- `bun run test` runs Vitest in browser headless mode.
 
 ## Implementation Principles
 
@@ -39,4 +39,3 @@
 ## MVP Milestones
 
 TBD.
-

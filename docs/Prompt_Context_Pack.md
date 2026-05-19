@@ -29,8 +29,6 @@ Paste this compact context into ChatGPT or Codex when needed.
 
 ## Current Verification Commands
 
-- `pnpm lint`
-- `pnpm build`
-- `pnpm test`
-- `pnpm format:check`
-
+- `bun run lint`
+- `bun run build`
+- `bun run test`

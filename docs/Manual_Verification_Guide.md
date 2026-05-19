@@ -4,13 +4,13 @@ Use this guide to verify each ticket beyond build success.
 
 ## Baseline App Check
 
-1. Run `pnpm install` if dependencies changed or node_modules is missing.
-2. Run `pnpm dev`.
+1. Run `bun install` if dependencies changed or node_modules is missing.
+2. Run `bun run dev`.
 3. Open the local app URL printed by Vite.
 4. Confirm the app loads.
 5. Confirm the expected route or UI section appears.
 6. Check browser console for errors.
-7. Run `pnpm build`.
+7. Run `bun run build`.
 8. Confirm build succeeds.
 
 ## UI Ticket Check
@@ -35,4 +35,3 @@ Record:
 - Browser/dev-server URL if used
 - Any console/runtime errors
 - Remaining risks
-
